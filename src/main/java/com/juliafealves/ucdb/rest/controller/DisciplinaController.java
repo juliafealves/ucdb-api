@@ -12,12 +12,9 @@ import java.util.List;
 @RequestMapping({ "v1/disciplinas" })
 @RestController
 public class DisciplinaController {
-  private DisciplinaService disciplinaService;
-
+  
   @Autowired
-  public DisciplinaController(DisciplinaService disciplinaService) {
-    this.disciplinaService = disciplinaService;
-  }
+  private DisciplinaService disciplinaService;
 
   @PostMapping
   public ResponseEntity<Disciplina> salvar(@RequestBody Disciplina disciplina) {
